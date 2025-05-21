@@ -52,11 +52,11 @@
     <h2>Bước 2: Viết HTML</h2>
     <h3>Mô tả trước khối code</h3>
     <p>
-      Đây là phần khung xương, bạn đặt form để nhập task, một <code>&lt;ul&gt;</code> để hiển
+      Đây là phần khung xương, bạn đặt form để nhập task, một <code class="lang-html">&lt;ul&gt;</code> để hiển
       thị danh sách, rồi link đến CSS/JS.
     </p>
-    <pre class="language-html">
-<code>&lt;!-- index.html --&gt;
+    <pre>
+<code class="language-html">&lt;!-- index.html --&gt;
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;vi&quot;&gt;
 &lt;head&gt;
@@ -80,12 +80,12 @@
     <h3>Giải thích sau khối code</h3>
     <ol>
       <li>
-        <code>&lt;form id=&quot;todo-form&quot;&gt;</code>để bắt sự kiện submit khi người
+        <code class="language-html">&lt;form id=&quot;todo-form&quot;&gt;</code>để bắt sự kiện submit khi người
         dùng nhấn “Thêm”.
       </li>
-      <code><li>&lt;input id=&quot;todo-input&quot;&gt;</code>nhận text của todo mới.</li>
+      <code class="language-html"><li>&lt;input id=&quot;todo-input&quot;&gt;</code>nhận text của todo mới.</li>
       <li>
-        <code>&lt;ul id=&quot;todo-list&quot;&gt;</code>chứa các <code>&lt;li&gt;</code>đại diện cho từng
+        <code class="language-html">&lt;ul id=&quot;todo-list&quot;&gt;</code>chứa các <code class="language-html">&lt;li&gt;</code>đại diện cho từng
         task.
       </li>
       <li>Cuối trang chèn app.js để gắn logic JavaScript.</li>
@@ -96,8 +96,8 @@
       CSS cực đơn giản: canh giữa, bo góc, thêm màu nền nhẹ để đỡ chói. Bạn cũng
       có thể style xịn hơn sau.
     </p>
-    <pre class="language-css">
-<code>/* styles.css */
+    <pre>
+<code class="language-css">/* styles.css */
 * {
   box-sizing: border-box;
 }
@@ -171,11 +171,11 @@ li button {
     <p>Ở đây mình:</p>
     <ol>
       <li>Bắt form submit, ngăn reload page.</li>
-      <li>Lấy value từ #todo-input, push vào mảng todos.</li>
-      <li>Hàm renderTodos() tạo DOM cho mỗi task và gắn sự kiện xóa.</li>
+      <li>Lấy value từ <code class="language-js">#todo-input</code>, push vào mảng todos.</li>
+      <li>Hàm <code class="language-js">renderTodos()</code> tạo DOM cho mỗi task và gắn sự kiện xóa.</li>
     </ol>
-    <pre class="language-js">
-<code>// app.js
+    <pre >
+<code class="language-js">// app.js
 const form = document.getElementById('todo-form');
 const input = document.getElementById('todo-input');
 const list = document.getElementById('todo-list');
@@ -213,14 +213,14 @@ function renderTodos() {
 renderTodos();</code></pre>
     <h3>Giải thích sau khối code</h3>
     <ol>
-      <li>todos là mảng lưu text các task.</li>
-      <li>Mỗi lần submit, ta kiểm tra input không rỗng rồi push() vào mảng.</li>
+      <li><code class="language-js">todos</code> là mảng lưu text các task.</li>
+      <li>Mỗi lần submit, ta kiểm tra input không rỗng rồi <code class="language-js">push()</code> vào mảng.</li>
       <li>
-        renderTodos(): reset nội dung <code>&lt;ul&gt;</code> , loop qua todos tạo từng
-        <code>&lt;li&gt;</code> + nút xóa.
+        <code class="language-js">renderTodos(): </code>reset nội dung <code class="language-js">&lt;ul&gt;</code> , loop qua todos tạo từng
+        <code class="language-js">&lt;li&gt;</code> + nút xóa.
       </li>
       <li>
-        Khi nhấn nút Xóa, ta splice() phần tử ra khỏi mảng rồi gọi lại
+        Khi nhấn nút Xóa, ta <code class="language-js" >splice()</code> phần tử ra khỏi mảng rồi gọi lại
         renderTodos() để cập nhật UI.
       </li>
     </ol>
