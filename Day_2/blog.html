@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism.min.css"
+    />
+    <title>
+      Hướng dẫn tạo ứng dụng Todo List đơn giản với HTML, CSS và JavaScript
+    </title>
+  </head>
+  <body>
+    <p><strong>Bài Tập Về Nhà Buổi 2</strong></p>
+    <ol>
+      <li>
+        <a href="http://127.0.0.1:3000/Day_2/index.html"
+          >Tạo trang hiển thị một bài thơ
+        </a>
+      </li>
+      <li>
+        <a href="http://127.0.0.1:3000/Day_2/news.html"
+          >Tạo một bài viết nói về bài thơ trên
+        </a>
+      </li>
+      <li>
+        <a href="http://127.0.0.1:3000/Day_2/blog.html"
+          >Highlight code trong nội dung bài viết
+        </a>
+      </li>
+      <li>
+        <a href="http://127.0.0.1:3000/Day_2/intro.html"
+          >Xây dựng trang giới thiệu bản thân</a
+        >
+      </li>
+    </ol>
+    <h1>
+      Hướng dẫn tạo ứng dụng Todo List đơn giản với HTML, CSS và JavaScript
+    </h1>
+    <h2>Bước 1: Tạo cấu trúc thư mục</h2>
+    <p>
+      Trước khi lao vào code, bạn đã chuẩn bị folder chưa? Mình gợi ý tạo một
+      thư mục tên todo-app, trong đó có ba file:
+    </p>
+    <ul>
+      <li>index.html</li>
+      <li>styles.css</li>
+      <li>app.js</li>
+    </ul>
+    <p>Vậy là xong folder. Giờ thì… có file để mở code chưa?</p>
+    <h2>Bước 2: Viết HTML</h2>
+    <h3>Mô tả trước khối code</h3>
+    <p>
+      Đây là phần khung xương, bạn đặt form để nhập task, một &lt;ul&gt; để hiển
+      thị danh sách, rồi link đến CSS/JS.
+    </p>
+    <pre class="language-html">
+<code>&lt;!-- index.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+ &lt;meta charset=&quot;UTF-8&quot; /&gt;
+ &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+ &lt;title&gt;Todo List App&lt;/title&gt;
+ &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;div class=&quot;container&quot;&gt;
+   &lt;h1&gt;My Todo List&lt;/h1&gt;
+   &lt;form id=&quot;todo-form&quot;&gt;
+     &lt;input type=&quot;text&quot; id=&quot;todo-input&quot; placeholder=&quot;Nhập việc cần l&agrave;m...&quot; /&gt;
+     &lt;button type=&quot;submit&quot;&gt;Th&ecirc;m&lt;/button&gt;
+   &lt;/form&gt;
+   &lt;ul id=&quot;todo-list&quot;&gt;&lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;script src=&quot;app.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <h3>Giải thích sau khối code</h3>
+    <ol>
+      <li>
+        &lt;form id=&quot;todo-form&quot;&gt;để bắt sự kiện submit khi người
+        dùng nhấn “Thêm”.
+      </li>
+      <li>&lt;input id=&quot;todo-input&quot;&gt;nhận text của todo mới.</li>
+      <li>
+        &lt;ul id=&quot;todo-list&quot;&gt;chứa các &lt;li&gt;đại diện cho từng
+        task.
+      </li>
+      <li>Cuối trang chèn app.js để gắn logic JavaScript.</li>
+    </ol>
+    <h2>Bước 3: Thêm chút CSS cho dễ nhìn</h2>
+    <h3>Mô tả trước khối code</h3>
+    <p>
+      CSS cực đơn giản: canh giữa, bo góc, thêm màu nền nhẹ để đỡ chói. Bạn cũng
+      có thể style xịn hơn sau.
+    </p>
+    <pre class="language-css">
+<code>/* styles.css */
+* {
+  box-sizing: border-box;
+}
+body {
+   font-family: sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+.container {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+form {
+  display: flex;
+}
+input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+    button {
+  padding: 8px 12px;
+  border: none;
+      background: #28a745;
+  color: white;
+  cursor: pointer;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+}
+li button {
+  background: #dc3545;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+    }</code></pre>
+    <h3>Giải thích sau khối code</h3>
+    <ul>
+      <li>Mỗi li có layout flex để text ở trái, nút xóa ở phải.</li>
+      <li>
+        Màu xanh lá cho nút thêm, đỏ cho xóa — ai nhìn cũng hiểu chức năng
+      </li>
+      <li>Container trắng, shadow nhẹ để nổi trên nền xám.</li>
+    </ul>
+    <h2>Bước 4: Viết JavaScript xử lý thêm, hiển thị và xóa</h2>
+    <h3>Mô tả trước khối code</h3>
+    <p>Ở đây mình:</p>
+    <ol>
+      <li>Bắt form submit, ngăn reload page.</li>
+      <li>Lấy value từ #todo-input, push vào mảng todos.</li>
+      <li>Hàm renderTodos() tạo DOM cho mỗi task và gắn sự kiện xóa.</li>
+    </ol>
+    <pre class="language-js">
+<code>// app.js
+const form = document.getElementById('todo-form');
+const input = document.getElementById('todo-input');
+const list = document.getElementById('todo-list');
+
+let todos = [];
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const text = input.value.trim();
+  if (!text) return; // tr&aacute;nh th&ecirc;m task rỗng
+  todos.push(text);
+  input.value = '';
+  renderTodos();
+});
+
+function renderTodos() {
+  list.innerHTML = ''; // x&oacute;a sạch trước khi vẽ lại
+  todos.forEach((todo, index) =&gt; {
+    const li = document.createElement('li');
+    li.textContent = todo;
+
+    const delBtn = document.createElement('button');
+    delBtn.textContent = 'X&oacute;a';
+    delBtn.addEventListener('click', () =&gt; {
+      todos.splice(index, 1);
+      renderTodos();
+    });
+
+    li.appendChild(delBtn);
+    list.appendChild(li);
+  });
+}
+
+// Lần đầu load page, nếu muốn khởi tạo danh s&aacute;ch trống
+renderTodos();</code></pre>
+    <h3>Giải thích sau khối code</h3>
+    <ol>
+      <li>todos là mảng lưu text các task.</li>
+      <li>Mỗi lần submit, ta kiểm tra input không rỗng rồi push() vào mảng.</li>
+      <li>
+        renderTodos(): reset nội dung &lt;ul&gt;, loop qua todos tạo từng
+        &lt;li&gt; + nút xóa.
+      </li>
+      <li>
+        Khi nhấn nút Xóa, ta splice() phần tử ra khỏi mảng rồi gọi lại
+        renderTodos() để cập nhật UI.
+      </li>
+    </ol>
+    <h2>Bước 5: Chạy thử và nâng cấp</h2>
+    <ul>
+      <li>Mở index.html bằng Live Server hoặc trình duyệt thường.</li>
+      <li>Thêm task, xóa task, thử bấm Enter.</li>
+      <li>
+        Nếu ổn rồi thì… nghĩ xem lưu lên localStorage, thêm checkbox đánh dấu
+        hoàn thành, filter theo “done”/“pending” cho next version.
+      </li>
+    </ul>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js"></script>
+  </body>
+</html>
