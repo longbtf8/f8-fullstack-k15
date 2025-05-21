@@ -52,7 +52,7 @@
     <h2>Bước 2: Viết HTML</h2>
     <h3>Mô tả trước khối code</h3>
     <p>
-      Đây là phần khung xương, bạn đặt form để nhập task, một &lt;ul&gt; để hiển
+      Đây là phần khung xương, bạn đặt form để nhập task, một <code>&lt;ul&gt;</code> để hiển
       thị danh sách, rồi link đến CSS/JS.
     </p>
     <pre class="language-html">
@@ -80,12 +80,12 @@
     <h3>Giải thích sau khối code</h3>
     <ol>
       <li>
-        &lt;form id=&quot;todo-form&quot;&gt;để bắt sự kiện submit khi người
+        <code>&lt;form id=&quot;todo-form&quot;&gt;</code>để bắt sự kiện submit khi người
         dùng nhấn “Thêm”.
       </li>
-      <li>&lt;input id=&quot;todo-input&quot;&gt;nhận text của todo mới.</li>
+      <code><li>&lt;input id=&quot;todo-input&quot;&gt;</code>nhận text của todo mới.</li>
       <li>
-        &lt;ul id=&quot;todo-list&quot;&gt;chứa các &lt;li&gt;đại diện cho từng
+        <code>&lt;ul id=&quot;todo-list&quot;&gt;</code>chứa các <code>&lt;li&gt;</code>đại diện cho từng
         task.
       </li>
       <li>Cuối trang chèn app.js để gắn logic JavaScript.</li>
@@ -216,8 +216,8 @@ renderTodos();</code></pre>
       <li>todos là mảng lưu text các task.</li>
       <li>Mỗi lần submit, ta kiểm tra input không rỗng rồi push() vào mảng.</li>
       <li>
-        renderTodos(): reset nội dung &lt;ul&gt;, loop qua todos tạo từng
-        &lt;li&gt; + nút xóa.
+        renderTodos(): reset nội dung <code>&lt;ul&gt;</code> , loop qua todos tạo từng
+        <code>&lt;li&gt;</code> + nút xóa.
       </li>
       <li>
         Khi nhấn nút Xóa, ta splice() phần tử ra khỏi mảng rồi gọi lại
