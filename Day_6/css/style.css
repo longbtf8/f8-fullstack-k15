@@ -294,3 +294,6 @@ div.post-section {
   text-decoration: none;
   color: #17678a;
 }
+.social-link .box-link:hover {
+  margin-top: -4px;
+}
