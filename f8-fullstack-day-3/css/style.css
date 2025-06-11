@@ -84,15 +84,14 @@ input {
   align-items: center;
 }
 .navbar .navbar-child ul {
-  gap: 20px;
   display: flex;
 }
 .navbar-child a {
+  padding: 12px;
   text-decoration: none;
   font-size: 19.2px;
   color: #fff;
 }
 .navbar-child a:hover {
-  padding: 12px;
   background-color: rgba(255, 255, 255, 0.1);
 }
