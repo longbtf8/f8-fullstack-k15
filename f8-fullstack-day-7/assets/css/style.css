@@ -11,7 +11,7 @@ html {
 }
 body {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 input,
 button,
@@ -47,7 +47,7 @@ h6 {
 .top-page {
   display: flex;
   min-height: 496px;
-  background: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)),
+  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
     url(../img/bg-banner-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -70,6 +70,73 @@ h6 {
 .header .logo {
   height: 34px;
 }
+/* menu da cap */
+.header .nav .nav-menu {
+  position: relative;
+}
+
+.nav .nav-menu .sub-menu {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 220px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.header .nav .nav-menu:hover .sub-menu {
+  visibility: visible;
+  opacity: 1;
+}
+.nav .nav-menu .sub-menu a {
+  display: block;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 0 0 0 25px;
+  line-height: 45px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+}
+.nav .nav-menu .sub-menu a:hover {
+  background-color: #b80257;
+  color: #fff;
+  padding-left: 29px;
+}
+/* menu search */
+.user-action .action-btn {
+  position: relative;
+}
+.user-action .action-btn form {
+  top: 50px;
+  right: 0;
+  position: absolute;
+  height: 55px;
+  width: 280px;
+  background-color: #fff;
+  position: absolute;
+  padding: 5px;
+  visibility: hidden;
+}
+.user-action .action-btn form .menu-search input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 1px solid #adadad;
+  padding: 0 50px 0 10px;
+}
+.user-action .action-btn form .menu-search .icon-search {
+  width: 48px;
+  color: #fff;
+  background: #b80257;
+  line-height: 45px;
+  position: absolute;
+  right: 5px;
+}
+.user-action .check-search:checked ~ form {
+  visibility: visible;
+}
+
 .header .nav {
   display: flex;
 }
@@ -86,6 +153,11 @@ h6 {
   padding: 14px 14px;
   color: #ffffff;
 }
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #fff;
+}
 .hero {
   flex-direction: column;
   flex-grow: 1;
@@ -94,6 +166,11 @@ h6 {
   align-items: center;
   justify-content: center;
 }
+.hero .breadcrumbs {
+  margin-top: 15px;
+  opacity: 0.8;
+}
+
 .breadcrumbs ul {
   display: flex;
 }
@@ -101,9 +178,7 @@ h6 {
   padding: 0px 10px;
   content: "/";
 }
-.hero h1 {
-  font-size: 2.4rem;
-}
+
 /* Conten-1 */
 .wrap-content {
   margin-bottom: 100px;
@@ -157,11 +232,11 @@ h2.heading-2 {
   padding-left: 25px;
   line-height: 40px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
 }
 .table ul a:hover {
   padding-left: 35px;
   color: #783df0;
-  transition: 0.6s;
 }
 /* Content-2 */
 .content-2 {
@@ -177,6 +252,11 @@ h2.heading-2 {
   justify-content: center;
   gap: 20px;
 }
+.content-2-nav ul li a {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #fff;
+}
 .content-2-nav ul li:first-child a {
   color: #fff;
   background-color: #783df0;
@@ -184,7 +264,6 @@ h2.heading-2 {
 .content-2-nav ul li:hover a {
   color: #fff;
   background-color: #783df0;
-  transition: 0.8s;
 }
 .content-2-nav ul a {
   border-radius: 20px;
@@ -248,6 +327,7 @@ h2.heading-2 {
   color: #fff;
   text-transform: uppercase;
   border-radius: 25px;
+  transition: all 0.4s ease-in-out;
 }
 .bottom .button-2 {
   background-color: #b90357;
@@ -258,14 +338,29 @@ h2.heading-2 {
   color: #fff;
   text-transform: uppercase;
   border-radius: 25px;
+  transition: all 0.4s ease-in-out;
+}
+.box .image {
+  overflow: hidden;
+}
+.box .image img {
+  /* transform: scale(0); */
+  transition: all 0.5s;
+}
+.box .image img:hover {
+  opacity: 0.8;
+  transform: scale3D(1.1, 1.1, 1);
+}
+.image:hover + .box-content h2 {
+  color: #000;
+  transition: all 0.6s ease;
 }
 .box .image:hover + .box-content h2 {
   color: #b90357;
-  transition: 0.8s;
 }
 .bottom button:hover {
-  margin-top: -5px;
-  transition: 0.4s;
+  translate: 0 -10px;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
 }
 .content-main .main-1 {
   display: flex;
@@ -339,7 +434,7 @@ h2.heading-2 {
 }
 .trademark p {
   color: rgba(255, 255, 255, 0.7);
-  line-height: 2, 2rem;
+  line-height: 2.2rem;
   margin: 20px 0;
 }
 .content-footer {
@@ -365,14 +460,14 @@ h2.heading-2 {
   transition: 0.5s;
 }
 .sub form input {
-  border-radius: 20px;
-  outline: none;
-  padding: 0 20px;
-  width: 270px;
+  width: 100%;
   height: 40px;
-  margin: 25px 0 10px;
-  color: #fff9;
-  background-color: #272727;
+  background: #272727;
+  border: none;
+  border-radius: 20px;
+  padding: 0 20px;
+  margin: 25px 0 10px 0;
+  color: rgba(255, 255, 255, 0.6);
 }
 .sub button {
   margin-top: 20px;
@@ -383,9 +478,10 @@ h2.heading-2 {
   color: #fff;
   line-height: 40px;
   font-weight: bold;
+  transition: all 0.5s ease-out;
 }
+
 .sub button:hover {
   background-color: #fff;
   color: #b80257;
-  transition: 0.5s;
 }
