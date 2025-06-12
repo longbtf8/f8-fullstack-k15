@@ -55,7 +55,7 @@ h6 {
   color: #fff;
   border-radius: 0.5rem;
   padding: 5px;
-  cursor: pointer;
+  cursor: grab;
 }
 .list-content > li {
   position: relative;
