@@ -478,10 +478,16 @@ h2.heading-2 {
   color: #fff;
   line-height: 40px;
   font-weight: bold;
-  transition: all 0.5s ease-out;
 }
 
-.sub button:hover {
+.sub button::after {
+  content: "";
+  z-index: -1;
+  transform: scale(1);
   background-color: #fff;
   color: #b80257;
+  transition: all 0.5s ease-out;
+}
+.sub button:hover::after {
+  transform: scale(1);
 }
