@@ -9,6 +9,10 @@
 html {
   font-size: 62.5%;
 }
+html,
+body {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.5rem;
@@ -83,9 +87,13 @@ h6 {
   left: 0;
   width: 220px;
   background-color: #fff;
+  scale: 1 0;
+  z-index: 1;
+  transform-origin: top left;
   transition: all 0.3s ease-in-out;
 }
 .header .nav .nav-menu:hover .sub-menu {
+  scale: 1;
   visibility: visible;
   opacity: 1;
 }
@@ -169,6 +177,13 @@ h6 {
 .hero .breadcrumbs {
   margin-top: 15px;
   opacity: 0.8;
+}
+.breadcrumbs ul li:first-child {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.breadcrumbs ul li:first-child:hover {
+  color: #6820e0;
 }
 
 .breadcrumbs ul {
@@ -313,6 +328,23 @@ h2.heading-2 {
 .content-main .box .image img {
   width: 100%;
 }
+.content-main .box .image-2 {
+  position: relative;
+  overflow: hidden;
+}
+.content-main .box .image-2 .lightning {
+  position: absolute;
+  font-size: 24px;
+  color: #fff;
+  background-color: #b80257;
+  width: 140px;
+  height: 100px;
+  top: -52px;
+  right: -68px;
+  rotate: 35deg;
+  padding: 66px 21px 28px 58px;
+  z-index: 1;
+}
 .bottom .person {
   display: flex;
   align-items: center;
@@ -347,7 +379,7 @@ h2.heading-2 {
   /* transform: scale(0); */
   transition: all 0.5s;
 }
-.box .image img:hover {
+.box .image:hover img {
   opacity: 0.8;
   transform: scale3D(1.1, 1.1, 1);
 }
@@ -438,7 +470,7 @@ h2.heading-2 {
   margin: 20px 0;
 }
 .content-footer {
-  gap: 100px;
+  gap: 50px;
   display: flex;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -449,7 +481,11 @@ h2.heading-2 {
   margin: 8px 0px 25px;
 }
 .content-footer .trademark {
-  width: 270px;
+  width: 350px;
+}
+.list-footer {
+  width: 200px;
+  height: 205px;
 }
 .list-footer ul a {
   text-decoration: none;
@@ -470,6 +506,7 @@ h2.heading-2 {
   color: rgba(255, 255, 255, 0.6);
 }
 .sub button {
+  position: relative;
   margin-top: 20px;
   width: 95px;
   height: 40px;
@@ -478,16 +515,43 @@ h2.heading-2 {
   color: #fff;
   line-height: 40px;
   font-weight: bold;
+  overflow: hidden;
+}
+.sub .footer-btn span {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  transition: all 0.5s ease;
 }
 
 .sub button::after {
   content: "";
-  z-index: -1;
-  transform: scale(1);
+  position: absolute;
+  border-radius: 20px;
+  z-index: 0;
+  inset: 0;
+  scale: 0;
   background-color: #fff;
   color: #b80257;
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease;
 }
 .sub button:hover::after {
-  transform: scale(1);
+  scale: 1;
+}
+
+.sub button:hover span {
+  color: #b80257;
+}
+div.up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: #fff;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background-color: #b80257;
+  right: 5px;
+  bottom: 5px;
 }
