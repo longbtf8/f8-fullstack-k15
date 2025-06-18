@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+.heading {
+  padding: 20px;
+  width: 100%;
+  margin-bottom: 80px;
+}
+h1 {
+  font-weight: bold;
+  font-size: 4.6rem;
+  text-align: center;
+  color: #333;
+}
+.content .container {
+  width: 100%;
+  display: flex;
+  gap: 20px 0;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.container .table {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);
+}
+.container .table .image {
+  overflow: hidden;
+}
+.content {
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container .table {
+  width: 300px;
+  height: 400px;
+  background-color: #c8c8c8;
+  translate: 0;
+  transition: translate 0.5s linear, background-color 0.5s linear;
+}
+
+.container .table .image img {
+  width: 100%;
+  filter: grayscale(100%);
+  scale: 1;
+  transition: linear 0.5s;
+  transition-property: scale, filter;
+  object-fit: cover;
+}
+.container .table:hover .image img {
+  scale: 1.1;
+  filter: grayscale(0);
+}
+
+.container .table:hover {
+  translate: 0 -5px;
+  background-color: #fff;
+}
+.table .footer {
+  padding: 20px;
+}
+.table .footer h2 {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3.2rem;
+  color: #333;
+}
+.table .footer p {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #666;
+}

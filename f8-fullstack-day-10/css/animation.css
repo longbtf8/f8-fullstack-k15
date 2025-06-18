@@ -1,0 +1,130 @@
+.content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dots-container {
+  display: flex;
+  /* position: relative; */
+  height: 400px;
+  width: 400px;
+  margin: 0 auto;
+  background: #f0f0f0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 80px;
+}
+.dot1,
+.dot2 {
+  display: flex;
+  gap: 20px;
+}
+.dot1 .dot {
+  animation: dot1 4s ease-in-out infinite;
+  animation-fill-mode: both;
+}
+.dot2 .dot {
+  animation: dot2 4s ease-in-out infinite;
+  animation-fill-mode: both;
+}
+.dot {
+  /* position: relative; */
+  width: 20px;
+  height: 20px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+}
+
+@keyframes dot1 {
+  0%,
+  100% {
+    opacity: 1;
+    translate: 0;
+    scale: 1;
+  }
+  25% {
+    /* translate: 0 50px; */
+    opacity: 1;
+    scale: 1.4;
+  }
+  50% {
+    translate: 0px 100px;
+    opacity: 1;
+    scale: 1;
+  }
+  75% {
+    /* translate: 0 50px; */
+    opacity: 0;
+    scale: 0.6;
+  }
+}
+@keyframes dot2 {
+  0%,
+  100% {
+    translate: 0;
+    opacity: 1;
+    scale: 1;
+  }
+  25% {
+    /* translate: 0 -50px; */
+    opacity: 0;
+    scale: 0.6;
+  }
+  50% {
+    translate: 0px -100px;
+    opacity: 1;
+    scale: 1;
+  }
+  75% {
+    /* translate: 0 -50px; */
+    opacity: 1;
+    scale: 1.4;
+  }
+}
+/* dot-1 */
+.dot1 .dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.dot1 .dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.dot1 .dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.dot1 .dot:nth-child(4) {
+  animation-delay: 0.9s;
+}
+.dot1 .dot:nth-child(5) {
+  animation-delay: 1.2s;
+}
+.dot1 .dot:nth-child(6) {
+  animation-delay: 1.5s;
+}
+.dot1 .dot:nth-child(7) {
+  animation-delay: 1.8s;
+}
+/* dot2 */
+.dot2 .dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.dot2 .dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.dot2 .dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.dot2 .dot:nth-child(4) {
+  animation-delay: 0.9s;
+}
+.dot2 .dot:nth-child(5) {
+  animation-delay: 1.2s;
+}
+.dot2 .dot:nth-child(6) {
+  animation-delay: 1.5s;
+}
+.dot2 .dot:nth-child(7) {
+  animation-delay: 1.8s;
+}
