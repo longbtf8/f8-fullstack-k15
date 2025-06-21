@@ -86,45 +86,45 @@
 }
 /* dot-1 */
 .dot1 .dot:nth-child(1) {
-  animation-delay: 0s;
+  animation-delay: -0s;
 }
 .dot1 .dot:nth-child(2) {
-  animation-delay: 0.3s;
+  animation-delay: -0.3s;
 }
 .dot1 .dot:nth-child(3) {
-  animation-delay: 0.6s;
+  animation-delay: -0.6s;
 }
 .dot1 .dot:nth-child(4) {
-  animation-delay: 0.9s;
+  animation-delay: -0.9s;
 }
 .dot1 .dot:nth-child(5) {
-  animation-delay: 1.2s;
+  animation-delay: -1.2s;
 }
 .dot1 .dot:nth-child(6) {
-  animation-delay: 1.5s;
+  animation-delay: -1.5s;
 }
 .dot1 .dot:nth-child(7) {
-  animation-delay: 1.8s;
+  animation-delay: -1.8s;
 }
 /* dot2 */
 .dot2 .dot:nth-child(1) {
-  animation-delay: 0s;
+  animation-delay: -0s;
 }
 .dot2 .dot:nth-child(2) {
-  animation-delay: 0.3s;
+  animation-delay: -0.3s;
 }
 .dot2 .dot:nth-child(3) {
-  animation-delay: 0.6s;
+  animation-delay: -0.6s;
 }
 .dot2 .dot:nth-child(4) {
-  animation-delay: 0.9s;
+  animation-delay: -0.9s;
 }
 .dot2 .dot:nth-child(5) {
-  animation-delay: 1.2s;
+  animation-delay: -1.2s;
 }
 .dot2 .dot:nth-child(6) {
-  animation-delay: 1.5s;
+  animation-delay: -1.5s;
 }
 .dot2 .dot:nth-child(7) {
-  animation-delay: 1.8s;
+  animation-delay: -1.8s;
 }
