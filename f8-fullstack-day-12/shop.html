@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
+    <title>SHOP</title>
 
     <!-- styles -->
     <link rel="stylesheet" href="./css/reset.css" />
@@ -167,11 +167,12 @@
             <!--  end header -->
             <!-- hero -->
             <div class="hero">
-              <h1>Contact Us</h1>
+              <h1>Shop</h1>
               <div class="breadcrumbs">
                 <ul>
                   <li>Home</li>
-                  <li>Courses</li>
+                  <li>Page</li>
+                  <li>Shop</li>
                 </ul>
               </div>
             </div>
@@ -181,66 +182,180 @@
       </div>
       <!--End top-page  -->
 
-      <!-- start body -->
-      <div class="body-container">
-        <div class="card">
-          <div class="card-1">
-            <img src="./assets/img/building.jpg" alt="card-1" />
-          </div>
-          <div class="card-2">
-            <div class="card-2-content">
-              <h2>OUR CONTACT</h2>
-              <ul>
-                <li>
-                  <i class="fa-solid fa-location-dot"></i>
-                  1010, Mountain view North Pole, LA, CA
-                </li>
-                <li>
-                  <i class="fa-solid fa-phone"></i>
-                  +1 202 245 3062
-                </li>
-                <li>
-                  <i class="fa-regular fa-envelope"></i>
-                  info@fintech.com
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="form">
-          <form>
-            <div class="form-child first-name">
-              <input type="text" placeholder="First Name" />
-            </div>
-            <div class="form-child last-name">
-              <input type="text" placeholder="Last Name" />
-            </div>
-            <div class="form-child mail">
-              <input type="email" placeholder="Email" />
-            </div>
-            <div class="form-child tel">
-              <input type="tel" placeholder="Phone" />
-            </div>
-            <div class="form-child mess">
-              <textarea placeholder="Write Message" name="mess"></textarea>
-            </div>
+      <!-- Start body -->
+      <div class="wrap-body">
+        <!-- body-1 -->
+        <div class="wrap-body-1">
+          <form action="" class="body-search">
+            <input type="text" placeholder="Search Product" />
+            <button>Search</button>
           </form>
-          <button input="button">SEND</button>
+          <h2 class="body-heading-2">Shop Categories :</h2>
+          <ul class="list-shop">
+            <li><a href="#">SMM Shop</a></li>
+            <li><a href="#">Network Security</a></li>
+            <li><a href="#">Programming</a></li>
+            <li><a href="#">Search Engine Opt</a></li>
+            <li><a href="#">Social Media</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">User Experience</a></li>
+            <li><a href="#">Website Analytics</a></li>
+          </ul>
+          <h2 class="body-heading-2">Popular Product</h2>
+
+          <div class="box">
+            <img src="./assets/img/1.jpg" alt="computer" />
+            <a class="box--text">Analysis & data</a>
+            <strong class="box--text2">$ 235</strong>
+          </div>
+          <div class="box">
+            <img src="./assets/img/2.jpg" alt="computer" />
+            <a class="box--text">Software Dev... </a>
+            <strong class="box--text2">$ 35</strong>
+          </div>
+          <div class="box">
+            <img src="./assets/img/3.jpg" alt="computer" />
+            <a class="box--text">Marketing Plan </a>
+            <strong class="box--text2">$ 75</strong>
+          </div>
+          <div class="box">
+            <img src="./assets/img/2.jpg" alt="computer" />
+            <a class="box--text">Google Expands </a>
+            <strong class="box--text2">$ 234</strong>
+          </div>
         </div>
+        <!-- end body-1 -->
+
+        <!-- start body-2 -->
+        <div class="wrap-body-2">
+          <div class="select-filter">
+            <label for="checkbox-body">
+              <span>Select Filter</span>
+              <i class="down fa-solid fa-chevron-down"></i>
+            </label>
+            <input type="checkbox" id="checkbox-body" hidden />
+            <ul class="list-select-filter" hidden>
+              <li><a href="#">Select Filter</a></li>
+              <li><a href="#">By Price</a></li>
+              <li><a href="#">By Category</a></li>
+              <li><a href="#">By Date</a></li>
+            </ul>
+          </div>
+          <p class="body-2-p">Showing 1-9 of 25 Result</p>
+          <!-- Card -->
+          <div class="wrap-body-2-card">
+            <div class="card">
+              <div class="wrap-img">
+                <img src="./assets/img/5.jpg" alt="Ten-steps-to-making" />
+              </div>
+              <h3><a href="#">Ten steps to making</a></h3>
+              <strong>$89</strong>
+              <div class="wrap-button">
+                <a href="#" class="button">ADD TO CART</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="wrap-img">
+                <img src="./assets/img/6.jpg" alt="Ten-steps-to-making" />
+              </div>
+              <h3><a href="#">Long-Tail SEO Strategy</a></h3>
+              <strong>$19</strong>
+              <div class="wrap-button">
+                <a href="#" class="button">ADD TO CART</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="wrap-img">
+                <img src="./assets/img/7.jpg" alt="Ten-steps-to-making" />
+              </div>
+              <h3><a href="#">Create optimized content</a></h3>
+              <strong>$79</strong>
+              <div class="wrap-button">
+                <a href="#" class="button">ADD TO CART</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="wrap-img">
+                <img src="./assets/img/8.jpg" alt="Ten-steps-to-making" />
+              </div>
+              <h3><a href="#">Boost Your Organic</a></h3>
+              <strong>$9</strong>
+              <div class="wrap-button">
+                <a href="#" class="button">ADD TO CART</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="wrap-img">
+                <img src="./assets/img/9.jpg" alt="Ten-steps-to-making" />
+              </div>
+              <h3><a href="#">Search Rankings</a></h3>
+              <strong>$47</strong>
+              <div class="wrap-button">
+                <a href="#" class="button">ADD TO CART</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="wrap-img">
+                <img src="./assets/img/10.jpg" alt="Ten-steps-to-making" />
+              </div>
+              <h3><a href="#">School PPC</a></h3>
+              <strong>$36</strong>
+              <div class="wrap-button">
+                <a href="#" class="button">ADD TO CART</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="wrap-img">
+                <img src="./assets/img/11.jpg" alt="Ten-steps-to-making" />
+              </div>
+              <h3><a href="#">Guide to SEO</a></h3>
+              <strong>$19</strong>
+              <div class="wrap-button">
+                <a href="#" class="button">ADD TO CART</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="wrap-img">
+                <img src="./assets/img/12.jpg" alt="Ten-steps-to-making" />
+              </div>
+              <h3><a href="#">Influencer Marketing </a></h3>
+              <strong>$90</strong>
+              <div class="wrap-button">
+                <a href="#" class="button">ADD TO CART</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="wrap-img">
+                <img src="./assets/img/13.jpg" alt="Ten-steps-to-making" />
+              </div>
+              <h3><a href="#">PPC Agency</a></h3>
+              <strong>$78</strong>
+              <div class="wrap-button">
+                <a href="#" class="button">ADD TO CART</a>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+          <!-- next page -->
+          <div class="wrap-page">
+            <div class="page"><a href="#">1</a></div>
+            <div class="page"><a href="#">2</a></div>
+            <div class="page"><a href="#">3</a></div>
+            <div class="page">
+              <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- end body 2 -->
       </div>
       <!-- end body -->
-
-      <!-- Map -->
-      <iframe
-        class="map"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7450.960743052676!2d105.82067840006896!3d20.973372812749137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1750500391532!5m2!1svi!2s"
-        width="600"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
 
       <!-- footer -->
       <div class="footer">
