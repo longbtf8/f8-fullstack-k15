@@ -469,13 +469,13 @@ div.up {
 }
 .wrap-body-2-card .card .wrap-img {
   width: 100%;
-  /* height: 255px; */
   overflow: hidden;
 }
 .wrap-body-2-card .card:hover img {
   scale: 1.1;
 }
 .wrap-body-2-card .card img {
+  display: block;
   scale: 1;
   width: 100%;
   transition: scale 0.3s linear;
